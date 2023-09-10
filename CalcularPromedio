@@ -1,0 +1,19 @@
+function calcularPromedio(arr) {
+  // Verificar si el arreglo está vacío para evitar la división por cero.
+  if (arr.length === 0) {
+    return 0;
+  }
+
+  // Calcular la suma de los elementos en el arreglo.
+  const suma = arr.reduce((total, num) => total + num, 0);
+
+  // Calcular el promedio dividiendo la suma por la cantidad de elementos.
+  const promedio = suma / arr.length;
+
+  return promedio;
+}
+
+// Ejemplo de uso:
+const arreglo = [10, 20, 30, 40, 50];
+const promedio = calcularPromedio(arreglo);
+console.log(`El promedio es: ${promedio}`);
